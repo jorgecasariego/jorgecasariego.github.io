@@ -31,14 +31,14 @@ Testing also provides you with the following advantages:
 #### Especial Elements
 - [Fundamentals-of-Testing](#fundamentals-of-testing)
 - [Build-effective-unit-tests](#build-effective-unit-tests)
-- [Automate user interface tests](#automate-user-interface-tests)
-- [Test app component integrations](#test-app-component-integrations)
-- [Test UI performance](#test-ui-performance)
+- [Automate-user-interface-tests](#automate-user-interface-tests)
+- [Test-app-component-integrations](#test-app-component-integrations)
+- [Test-UI-performance](#test-ui-performance)
 - [Espresso](#espresso)
-- [UI Automator](#ui-automator)
-- [JUnit4 rules with AndroidX Test](#junit4-rules-with-androidx-test)
+- [UI-Automator](#ui-automator)
+- [JUnit4-rules-with-AndroidX-Test](#junit4-rules-with-androidx-test)
 - [AndroidJUnitRunner](#androidjunitrunner)
-- [Additional Resources for Testing](#additional-resources-for-testing)
+- [Additional-Resources-for-Testing](#additional-resources-for-testing)
 
 #### Samples
 
@@ -113,7 +113,7 @@ Like the [Medium](https://medium.com/) component.
 
 ---
 
-## Automate user interface tests
+## Automate-user-interface-tests
 
 You can give evidence to a post. Just add the tag to the markdown file.
 
@@ -123,7 +123,7 @@ star: true
 
 ---
 
-## Test app component integrations
+## Test-app-component-integrations
 
 You can add a especial *hr* to your text.
 
@@ -154,13 +154,13 @@ You can add an especial hidden content that appears on hover.
 
 ---
 
-## UI Automator
+## UI-Automator
 
 You can add an especial hidden content that appears on hover.
 
 ---
 
-## JUnit4 rules with AndroidX Test
+## JUnit4-rules-with-AndroidX-Test
 
 You can add an especial hidden content that appears on hover.
 
@@ -172,7 +172,7 @@ You can add an especial hidden content that appears on hover.
 
 ---
 
-## Additional Resources for Testing
+## Additional-Resources-for-Testing
 
 You can add an especial hidden content that appears on hover.
 
