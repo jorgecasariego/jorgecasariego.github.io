@@ -30,18 +30,17 @@ Testing also provides you with the following advantages:
 
 #### Especial Elements
 - [Fundamentals-of-Testing](#fundamentals-of-testing)
-- [Build effective unit tests](#Build effective unit tests)
-- [Automate user interface tests](#Automate user interface tests)
-- [Test app component integrations](#Test app component integrations)
-- [Test UI performance](#Test UI performance)
-- [Espresso](#Espresso)
-- [UI Automator](#UI Automator)
-- [JUnit4 rules with AndroidX Test](#JUnit4 rules with AndroidX Test)
-- [AndroidJUnitRunner](#AndroidJUnitRunner)
-- [Additional Resources for Testing](#AndroidJUnitRunner)
+- [Build effective unit tests](#build-effective-unit-tests)
+- [Automate user interface tests](#automate-user-interface-tests)
+- [Test app component integrations](#test-app-component-integrations)
+- [Test UI performance](#test-ui-performance)
+- [Espresso](#espresso)
+- [UI Automator](#ui-automator)
+- [JUnit4 rules with AndroidX Test](#junit4-rules-with-androidx-test)
+- [AndroidJUnitRunner](#androidjunitrunner)
+- [Additional Resources for Testing](#additional-resources-for-testing)
 
 #### Samples
-- [Videos](#videos)
 
 ---
 
