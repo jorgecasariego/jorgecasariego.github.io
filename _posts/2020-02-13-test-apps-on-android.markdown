@@ -1,7 +1,7 @@
 ---
 title: "Test apps on Android "
 layout: post
-date: 2020-12-13 18:03
+date: 2020-02-13 18:03
 image: 
 headerImage: false
 tag:
@@ -12,7 +12,7 @@ author: jorgecasariego
 description: All about testing on Android
 ---
 
-## Summary:
+## Description
 
 By running tests against your app consistently, you can verify your app's correctness, functional behavior, and usability 
 before you release it publicly.
@@ -29,7 +29,7 @@ Testing also provides you with the following advantages:
 
 
 #### Especial Elements
-- [Fundamentals of Testing](#Fundamentals of Testing)
+- [Fundamentals of Testing](#Fundamentals-of-Testing)
 - [Build effective unit tests](#Build effective unit tests)
 - [Automate user interface tests](#Automate user interface tests)
 - [Test app component integrations](#Test app component integrations)
@@ -45,7 +45,7 @@ Testing also provides you with the following advantages:
 
 ---
 
-## Fundamentals of Testing
+## Fundamentals-of-Testing
 
 You can try the evidence!
 
