@@ -29,7 +29,7 @@ Testing also provides you with the following advantages:
 
 
 #### Especial Elements
-- [Fundamentals-of-Testing](#Fundamentals-of-Testing)
+- [Fundamentals-of-Testing](#fundamentals-of-testing)
 - [Build effective unit tests](#Build effective unit tests)
 - [Automate user interface tests](#Automate user interface tests)
 - [Test app component integrations](#Test app component integrations)
@@ -47,13 +47,12 @@ Testing also provides you with the following advantages:
 
 ## Fundamentals-of-Testing
 
-You can try the evidence!
+Users interact with your app on a variety of levels, from pressing a button to downloading information onto their device.
+Accordingly, you should test a variety of use cases and interactions as you iteratively develop your app.
 
-<span class="evidence">Paragraphs can be written like so. A paragraph is the basic block of Markdown. A paragraph is what text will turn into when there is no reason it should become anything else.</span>
-
-{% highlight html %}
-<span class="evidence">Paragraphs can be written like so. A paragraph is the basic block of Markdown. A paragraph is what text will turn into when there is no reason it should become anything else.</span>
-{% endhighlight %}
+#### Organize your code for testing
+As your app expands, you might find it necessary to fetch data from a server, interact with the device's sensors, access 
+local storage, or render complex user interfaces. The versatility of your app demands a comprehensive testing strategy.
 
 ---
 
