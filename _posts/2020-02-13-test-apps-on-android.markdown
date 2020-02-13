@@ -29,7 +29,7 @@ Testing also provides you with the following advantages:
 
 
 #### Especial Elements
-- [Fundamentals of Testing](#Fundamentals-of-Testing)
+- [Fundamentals-of-Testing](#Fundamentals-of-Testing)
 - [Build effective unit tests](#Build effective unit tests)
 - [Automate user interface tests](#Automate user interface tests)
 - [Test app component integrations](#Test app component integrations)
