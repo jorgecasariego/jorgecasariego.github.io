@@ -30,7 +30,7 @@ Testing also provides you with the following advantages:
 
 #### Especial Elements
 - [Fundamentals-of-Testing](#fundamentals-of-testing)
-- [Build effective unit tests](#build-effective-unit-tests)
+- [Build-effective-unit-tests](#build-effective-unit-tests)
 - [Automate user interface tests](#automate-user-interface-tests)
 - [Test app component integrations](#test-app-component-integrations)
 - [Test UI performance](#test-ui-performance)
@@ -55,7 +55,7 @@ local storage, or render complex user interfaces. The versatility of your app de
 
 ---
 
-## Build effective unit tests
+## Build-effective-unit-tests
 
 Like the [Medium](https://medium.com/) component.
 
