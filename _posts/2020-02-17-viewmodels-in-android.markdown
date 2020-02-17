@@ -16,7 +16,7 @@ description: ViewModel Overview
   
 The Android framework manages the lifecycles of UI controllers, such as activities and fragments. The framework may decide to destroy or re-create a UI controller in response to certain user actions or device events that are completely out of your control.
 
-If the system destroys or re-creates a UI controller, any transient UI-related data you store in them is lost. For example, your app may include a list of users in one of its activities. When the activity is re-created for a configuration change, the new activity has to re-fetch the list of users. For simple data, the activity can use the  `[onSaveInstanceState()](https://developer.android.com/reference/android/app/Activity.html#onSaveInstanceState(android.os.Bundle))`  method and restore its data from the bundle in  `[onCreate()](https://developer.android.com/reference/android/app/Activity.html#onCreate(android.os.Bundle))`, but this approach is only suitable for small amounts of data that can be serialized then deserialized, not for potentially large amounts of data like a list of users or bitmaps.
+If the system destroys or re-creates a UI controller, any transient UI-related data you store in them is lost. For example, your app may include a list of users in one of its activities. When the activity is re-created for a configuration change, the new activity has to re-fetch the list of users. For simple data, the activity can use the  [onSaveInstanceState()](https://developer.android.com/reference/android/app/Activity.html#onSaveInstanceState(android.os.Bundle))  method and restore its data from the bundle in  [onCreate()](https://developer.android.com/reference/android/app/Activity.html#onCreate(android.os.Bundle)), but this approach is only suitable for small amounts of data that can be serialized then deserialized, not for potentially large amounts of data like a list of users or bitmaps.
 
 Another problem is that UI controllers frequently need to make asynchronous calls that may take some time to return. The UI controller needs to manage these calls and ensure the system cleans them up after it's destroyed to avoid potential memory leaks. This management requires a lot of maintenance, and in the case where the object is re-created for a configuration change, it's a waste of resources since the object may have to reissue calls it has already made.
 
@@ -51,7 +51,7 @@ Figure 1 illustrates the various lifecycle states of an activity as it undergoes
 ![Illustrates the lifecycle of a ViewModel as an activity changes state.](https://developer.android.com/images/topic/libraries/architecture/viewmodel-lifecycle.png)
 
 
-You usually request a [`ViewModel`](https://developer.android.com/reference/androidx/lifecycle/ViewModel.html) the first time the system calls an activity object's `[onCreate()](https://developer.android.com/reference/android/app/Activity.html#onCreate(android.os.Bundle))` method. The system may call `[onCreate()](https://developer.android.com/reference/android/app/Activity.html#onCreate(android.os.Bundle))` several times throughout the life of an activity, such as when a device screen is rotated. The [`ViewModel`](https://developer.android.com/reference/androidx/lifecycle/ViewModel.html) exists from when you first request a [`ViewModel`](https://developer.android.com/reference/androidx/lifecycle/ViewModel.html) until the activity is finished and destroyed.
+You usually request a [`ViewModel`](https://developer.android.com/reference/androidx/lifecycle/ViewModel.html) the first time the system calls an activity object's [onCreate()](https://developer.android.com/reference/android/app/Activity.html#onCreate(android.os.Bundle)) method. The system may call [onCreate()](https://developer.android.com/reference/android/app/Activity.html#onCreate(android.os.Bundle)) several times throughout the life of an activity, such as when a device screen is rotated. The [`ViewModel`](https://developer.android.com/reference/androidx/lifecycle/ViewModel.html) exists from when you first request a [`ViewModel`](https://developer.android.com/reference/androidx/lifecycle/ViewModel.html) until the activity is finished and destroyed.
 
 
 ### Getting a ViewModel Instance
@@ -62,8 +62,6 @@ In order to get an instance of  [`ViewModel`](https://developer.android.com/refe
 
 A sample initialization would look like this:
 
-{ % gist jorgecasariego/158f075e823407af5ea7ebdf8b9060c6 % }
-
 <script src="https://gist.github.com/jorgecasariego/158f075e823407af5ea7ebdf8b9060c6.js"></script>
 
 Here we’ve created a  [`ViewModel`](https://developer.android.com/reference/android/arch/lifecycle/ViewModel)  tied to  `MyFragment`. This means that this  [`ViewModel`](https://developer.android.com/reference/android/arch/lifecycle/ViewModel)  is aware of the lifecycle of  `MyFragment`  and it will be retrieved with the previous state only if it’s provided for that fragment.  `MyViewModel`  can also be provided for some other fragment or activity, but in such a case, the new instance would be created for each of the components.
@@ -72,8 +70,6 @@ Here we’ve created a  [`ViewModel`](https://developer.android.com/reference/an
 
 To understand how the state is restored
 
-{ % gist jorgecasariego/6448f9d3c07219c3a34569b6f821c385 % }
-
 <script src="https://gist.github.com/jorgecasariego/6448f9d3c07219c3a34569b6f821c385.js"></script>
 
 In this example,  `MyViewModel`  has the  `getImage()`  method the UI components can use to get an image from the web.  `MyViewModel`  will also cache the image when downloaded so it doesn’t have to be downloaded more than once.
@@ -81,8 +77,6 @@ In this example,  `MyViewModel`  has the  `getImage()`  method the UI components
 **Note:**  The above example serves the purpose of demonstrating that the  `ViewModel`  is restored when the configuration changes. The image downloading should be offloaded from the main thread,  `LiveData`  should be used, etc. We will improve this example when we introduce  `LiveData`  in the next section.
 
 Now in  `MyFragment`, let’s create a layout that has an  `ImageView`  that simply shows the downloaded image once the fragment is loaded:
-
-{ % gist jorgecasariego/9cb117832c32b30aed93f807dedc98b1 % }
 
 <script src="https://gist.github.com/jorgecasariego/9cb117832c32b30aed93f807dedc98b1.js"></script>
 
@@ -98,21 +92,15 @@ What is  [`LiveData`](https://developer.android.com/reference/android/arch/lifec
 
 Let’s update our initial example where we retrieve the image to be displayed in the  `ImageView`, this time using  [`LiveData`](https://developer.android.com/reference/android/arch/lifecycle/LiveData). This is the outline of our  `ViewModel`  now:
 
-{ % gist jorgecasariego/5640298d202701117b73bf1a8491d1e4 % }
-
 <script src="https://gist.github.com/jorgecasariego/5640298d202701117b73bf1a8491d1e4.js"></script>
 
 This time, the  `getImage()`  method doesn’t return anything, and it will just be called from the UI component to start retrieving the image. Once the image is retrieved, either by being downloaded or pulled from the cache, it will be pushed to the  `imageLiveData`  object and delivered to all of its subscribers. Notice that  `ViewModel`  doesn’t care who is subscribed; it just emits the result.
 
 The  `MyFragment`  implementation will now look like this:
 
-{ % gist jorgecasariego/53920cca8ae8bbd4ba25e7b278ec534e % }
-
 <script src="https://gist.github.com/jorgecasariego/53920cca8ae8bbd4ba25e7b278ec534e.js"></script>
 
 A `ViewModel` needs to call [`setValue()`](https://developer.android.com/reference/android/arch/lifecycle/LiveData#setvalue) (or [`postValue()`](https://developer.android.com/reference/android/arch/lifecycle/LiveData#postvalue) if not on main thread) on the `LiveData` object to push the given value to all of the observers. Here’s the sample implementation for our case:
-
-{ % gist jorgecasariego/c7dba55f939948ce4dbb4ecc03108d24 % }
 
 <script src="https://gist.github.com/jorgecasariego/c7dba55f939948ce4dbb4ecc03108d24.js"></script>
 
