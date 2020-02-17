@@ -30,6 +30,13 @@ It can be hard to understand how fast a modern phone executes code compared to a
 
 On Android, every app has a main thread that is in charge of handling UI (like drawing views) and coordinating user interactions. If there is too much work happening on this thread, the app appears to hang or slow down, leading to an undesirable user experience. Any long running task should be done without blocking the main thread, so your app doesn’t display what’s called “jank,” like frozen animations, or respond slowly to touch events.
 
+For your app to display to the user without any visible pauses, the main thread has to update the screen every 16ms or more often, which is about 60 frames per second. Many common tasks take longer than this, such as parsing large JSON datasets, writing data to a database, or fetching data from the network. Therefore, calling code like this from the main thread can cause the app to pause, stutter, or even freeze. And if you block the main thread for too long, the app may even crash and present an Application Not Responding dialog.
+
+Watch the video below for an introduction to how coroutines solves this problem for us on Android by introducing main-safety.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ne6CD1ZhAI0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 In order to perform a network request off the main thread, a common pattern is callbacks. Callbacks provide a handle to a library that it can use to call back into your code at some future time. With callbacks, fetching developer.android.com might look like this:
 
 <script src="https://gist.github.com/jorgecasariego/6d0de282fe0ce892550b841f23650ae5.js"></script>
