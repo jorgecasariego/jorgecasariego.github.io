@@ -34,7 +34,7 @@ For your app to display to the user without any visible pauses, the main thread 
 
 Watch the video below for an introduction to how coroutines solves this problem for us on Android by introducing main-safety.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ne6CD1ZhAI0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ne6CD1ZhAI0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>Main-safety with coroutines
 
 
 In order to perform a network request off the main thread, a common pattern is callbacks. Callbacks provide a handle to a library that it can use to call back into your code at some future time. With callbacks, fetching developer.android.com might look like this:
@@ -67,6 +67,13 @@ Animation showing how Kotlin implements suspend and resume to replace callbacks.
 Looking at how `fetchDocs` executes, you can see how **suspend** works. Whenever a coroutine is suspended, the current stack frame (the place that Kotlin uses to keep track of which function is running and its variables) is copied and saved for later. When it **resumes**, the stack frame is copied back from where it was saved and starts running again. In the middle of the animation — when all of the coroutines on the main thread are suspended, the main thread is free to update the screen and handle user events. Together, suspend and resume replace callbacks.
 
 Even though we wrote straightforward sequential code that looks exactly like a blocking network request, coroutines will run our code exactly how we want and avoid blocking the main thread!
+
+## Understanding CoroutineScope
+
+In Kotlin, all coroutines run inside a  [`CoroutineScope`](https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.experimental/-coroutine-scope/). A scope controls the lifetime of coroutines through its job. When you cancel the job of a scope, it cancels all coroutines started in that scope. On Android, you can use a scope to cancel all running coroutines when, for example, the user navigates away from an  `Activity`  or  `Fragment`. Scopes also allow you to specify a default dispatcher. A dispatcher controls which thread runs a coroutine.
+
+For coroutines started by the UI, it is typically correct to start them on [`Dispatchers.Main`](https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-dispatchers/-main.html) which is the main thread on Android. A coroutine started on [`Dispatchers.Main`](https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-dispatchers/-main.html) won't block the main thread while suspended. Since a `ViewModel` coroutine almost always updates the UI on the main thread, starting coroutines on the main thread saves you extra thread switches. A coroutine started on the Main thread can switch dispatchers any time after it's started. For example, it can use another dispatcher to parse a large JSON result off the main thread.
+
 
 # Main-safety with coroutines
 
