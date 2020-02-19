@@ -5,7 +5,6 @@ date: 2020-02-18 22:06
 image: 
 headerImage: false
 tag:
-- android
 - Coroutines
 - Kotlin
 category: blog
