@@ -189,8 +189,6 @@ Alternatively, we can implement  `CoroutineScope`  interface in this  `Activity`
 
 <script src="https://gist.github.com/jorgecasariego/2231bc86558648fca4ea50f740fb984e.js"></script>
 
-<script src="https://gist.github.com/jorgecasariego/19bdbe67f91176a33ddbc948db561b57.js"></script>
-
 ## Conclusion
 
 Coroutines are a very good way to achieve  [asynchonous programming with kotlin](https://github.com/Kotlin/kotlinx.coroutines/blob/master/docs/composing-suspending-functions.md).  
