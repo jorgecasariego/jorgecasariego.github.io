@@ -138,6 +138,17 @@ In this example,  `fetchDocs`  is executing on the main thread, but can safely c
 
 It’s a really good idea to make every suspend function main-safe. If it does anything that touches the disk, network, or even just uses too much CPU, use `withContext` to make it safe to call from the main thread. This is the pattern that coroutines based libraries like Retrofit and Room follow. If you follow this style throughout your codebase your code will be much simpler and avoid mixing threading concerns with application logic. When followed consistently, coroutines are free to launch on the main thread and make network or database requests with simple code while guaranteeing users won’t see “jank.”
 
+## **Using viewModelScope**
+
+The AndroidX  `lifecycle-viewmodel-ktx`  library adds a CoroutineScope to ViewModels that's configured to start UI-related coroutines. To use this library, you must include it in the  `build.gradle (Module: app)`  file of your project. That step is already done in the codelab projects.
+
+    dependencies {
+      ...
+      implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:x.x.x"
+    }
+
+The library adds a  [`viewModelScope`](https://developer.android.com/topic/libraries/architecture/coroutines#viewmodelscope)  as an extension function of the  `ViewModel`  class. This scope is bound to  `Dispatchers.Main`  and will automatically be cancelled when the  `ViewModel`  is cleared.
+
 # Performance of withContext
 
 `withContext`  is as fast as callbacks or RxJava for providing main safety. It’s even possible to optimize  `withContext`  calls beyond what’s possible with callbacks in some situations. If a function will make 10 calls to a database, you can tell Kotlin to switch once in an outer  `withContext`  around all 10 calls. Then, even though the database library will call  `withContext`  repeatedly, it will stay on the same dispatcher and follow a fast-path. In addition, switching between  `Dispatchers.Default`  and  `Dispatchers.IO`  is optimized to avoid thread switches whenever possible.
