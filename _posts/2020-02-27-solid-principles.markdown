@@ -287,7 +287,7 @@ class Kurupi {
 
 class YerbaTest(val yerba: Yerba) {  
     fun getYerbaBrand() { 
-	    return fruit.getColor() 
+	    return yerba.getBrand() 
 	}  
 }
 ```
