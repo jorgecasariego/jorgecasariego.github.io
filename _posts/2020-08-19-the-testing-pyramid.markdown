@@ -9,7 +9,7 @@ tag:
 - testing
 category: blog
 author: jorgecasariego
-description: All about testing on Android
+description: Testing Strategy
 ---
 
 When thinking about a testing strategy, there are three related testing aspects:
