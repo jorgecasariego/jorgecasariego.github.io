@@ -17,8 +17,7 @@ I have a diverse skill set but most closely align with Android and iOS programmi
 	<li>NodeJS</li>
 	<li>AngularJS</li>
 	<li>Git</li>
-	<li>Scrum and Kanban</li>
-	<li>TDD e Continuous Integration</li>
+	<li>Scrum</li>
 </ul>
 
 <h2>Contributions</h2>
@@ -31,7 +30,11 @@ I have a diverse skill set but most closely align with Android and iOS programmi
 <h2>Work</h2>
 
 <ul>
+	<li>BairesDev</li>
 	<li>Enterprise Solutions</li>
+	<li>Crossbow & Hills</li>
+	<li>Telecom Personal</li>
+
 </ul>
 
 <h2>Education</h2>
@@ -39,4 +42,13 @@ I have a diverse skill set but most closely align with Android and iOS programmi
 <ul>
 	<li>Polytechnic University of Catalonia</li>
 	<li>Universidad Católica 'Nuestra Señora de la Asunción'</li>
+	<li>ECM: European College Management</li>
+</ul>
+
+<h2>Certifications</h2>
+
+<ul>
+	<li>Android Security Essentials - ATC</li>
+	<li>Android Application Development - ATC</li>
+	<li>Training Skills for Android ATC Certified Trainer Exam - ATC</li>
 </ul>
