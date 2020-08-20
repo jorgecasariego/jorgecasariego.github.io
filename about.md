@@ -12,12 +12,7 @@ I have a diverse skill set but most closely align with Android and iOS programmi
 <ul class="skill-list">
 	<li>Android</li>
 	<li>iOS</li>
-	<li>Swift</li>
-	<li>Kotlin</li>
-	<li>NodeJS</li>
-	<li>AngularJS</li>
-	<li>Git</li>
-	<li>Scrum</li>
+	<li>Angular</li>
 </ul>
 
 <h2>Contributions</h2>
@@ -48,6 +43,8 @@ I have a diverse skill set but most closely align with Android and iOS programmi
 <h2>Certifications</h2>
 
 <ul>
+	<li>Security Awareness Fundamentals - CertiProf</li>
+	<li>Scrum Foundation Professional Certificate - KnowBe4</li>
 	<li>Android Security Essentials - ATC</li>
 	<li>Android Application Development - ATC</li>
 	<li>Training Skills for Android ATC Certified Trainer Exam - ATC</li>
