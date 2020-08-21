@@ -26,6 +26,8 @@ There are inherent trade-offs between these aspects. For example, speed and fide
 
 - **Integration tests**: These test the interaction of several classes to make sure they behave as expected when used together. One way to structure integration tests is to have them test a single feature, such as the ability to save a task. They test a larger scope of code than unit tests, but are still optimized to run fast, versus having full fidelity. They can be run either locally or as instrumentation tests, depending on the situation. **Example**: Testing all the functionality of a single fragment and view model pair.
 
+These tests can be run either locally (**test** source set) or as instrumentation tests (**androidTest** source set).
+
 - **End to End tests(E2e)**: Test a combination of features working together. They test large portions of the app, simulate real usage closely, and therefore are usually slow. They have the highest fidelity and tell you that your application actually works as a whole. By and large, these tests will be instrumented tests (in the androidTest source set) 
 **Example**: Starting up the entire app and testing a few features together.
 
