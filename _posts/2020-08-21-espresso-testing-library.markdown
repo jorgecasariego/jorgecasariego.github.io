@@ -49,7 +49,7 @@ onView
 
 onView is an example of a static Espresso method that starts an Espresso statement. onView is one of the most common ones, but there are other options, such as onData.
 
-2.  [ViewMatcher](https://developer.android.com/reference/androidx/test/espresso/matcher/ViewMatchers.html)
+2. [ViewMatcher](https://developer.android.com/reference/androidx/test/espresso/matcher/ViewMatchers.html)
 
 ```
 withId(R.id.task_detail_title_text)
