@@ -41,7 +41,7 @@ What this statement does is find the checkbox view with the id task_detail_compl
 
 The majority of Espresso statements are made up of four parts:
 
-1. [Static Espresso method](https://developer.android.com/reference/androidx/test/espresso/Espresso.html#onView(org.hamcrest.Matcher%3Candroid.view.View%3E))
+- [Static Espresso method](https://developer.android.com/reference/androidx/test/espresso/Espresso.html#onView(org.hamcrest.Matcher%3Candroid.view.View%3E))
 
 ```
 onView
@@ -49,7 +49,7 @@ onView
 
 onView is an example of a static Espresso method that starts an Espresso statement. onView is one of the most common ones, but there are other options, such as onData.
 
-2. [ViewMatcher](https://developer.android.com/reference/androidx/test/espresso/matcher/ViewMatchers.html)
+- [ViewMatcher](https://developer.android.com/reference/androidx/test/espresso/matcher/ViewMatchers.html)
 
 ```
 withId(R.id.task_detail_title_text)
@@ -57,7 +57,7 @@ withId(R.id.task_detail_title_text)
 
 withId is an example of a ViewMatcher which gets a view by its ID. There are other view matchers which you can look up in the **[documentation](https://developer.android.com/reference/androidx/test/espresso/matcher/ViewMatchers.html)**.
 
-3. [ViewAction](https://developer.android.com/reference/androidx/test/espresso/ViewAction.html)
+- [ViewAction](https://developer.android.com/reference/androidx/test/espresso/ViewAction.html)
 
 ```
 perform(click())
@@ -66,7 +66,7 @@ perform(click())
 The perform method which takes a ViewAction. A ViewAction is something that can be done to the view, for example here, it's clicking the view.
 
 
-4. [ViewAssertion](https://developer.android.com/reference/androidx/test/espresso/assertion/ViewAssertions#matches)
+- [ViewAssertion](https://developer.android.com/reference/androidx/test/espresso/assertion/ViewAssertions#matches)
 
 ```
 check(matches(isChecked()))
