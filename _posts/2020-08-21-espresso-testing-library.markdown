@@ -57,21 +57,23 @@ withId(R.id.task_detail_title_text)
 
 withId is an example of a ViewMatcher which gets a view by its ID. There are other view matchers which you can look up in the **[documentation](https://developer.android.com/reference/androidx/test/espresso/matcher/ViewMatchers.html)**.
 
+3. [ViewAction](https://developer.android.com/reference/androidx/test/espresso/ViewAction.html)
+
+```
+perform(click())
+```
+
+The perform method which takes a ViewAction. A ViewAction is something that can be done to the view, for example here, it's clicking the view.
 
 
-With ViewModels or Repositories you can use constructor dependency injection to provide a dependency. Constructor dependency injection requires that you construct the class. Fragments and Activities are examples of classes that you don't construct and generally don't have access to the constructor of.
+4. [ViewAssertion](https://developer.android.com/reference/androidx/test/espresso/assertion/ViewAssertions#matches)
 
-Since you don't construct the fragment, you can't use constructor dependency injection to swap the repository test double to the fragment. Instead, you can use [ServiceLocator](https://en.wikipedia.org/wiki/Service_locator_pattern) pattern. 
+```
+check(matches(isChecked()))
+```
 
-# ServiceLocator Pattern
-
-The Service Locator pattern is an alternative to Dependency Injection. It involves creating a singleton class called the _"Service Locator"_, whose purpose is to provide dependencies, both for the regular and test code. In the regular app code (the main source set), all of these dependencies are the regular app dependencies. For the tests, you modify the Service Locator to provide test double versions of the dependencies.
-
-**Not using Service Locator**
+check which takes a ViewAssertion. ViewAssertions check or asserts something about the view. The most common ViewAssertion you'll use is the matches assertion. To finish the assertion, use another ViewMatcher, in this case isChecked.
 
 
-
-**Using a Service Locator**
-
-![alt text](https://codelabs.developers.google.com/codelabs/advanced-android-kotlin-training-testing-test-doubles/img/8ea9e5c7be9e2974.png 
+![alt text](https://codelabs.developers.google.com/codelabs/advanced-android-kotlin-training-testing-test-doubles/img/fa5526f1e3b48281.png 
 "Figure 1. Service Locator")
