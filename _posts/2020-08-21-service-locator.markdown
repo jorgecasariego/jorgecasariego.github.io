@@ -22,5 +22,13 @@ Since you don't construct the fragment, you can't use constructor dependency inj
 
 The Service Locator pattern is an alternative to Dependency Injection. It involves creating a singleton class called the _"Service Locator"_, whose purpose is to provide dependencies, both for the regular and test code. In the regular app code (the main source set), all of these dependencies are the regular app dependencies. For the tests, you modify the Service Locator to provide test double versions of the dependencies.
 
+**Not using Service Locator**
+
 ![alt text](https://codelabs.developers.google.com/codelabs/advanced-android-kotlin-training-testing-test-doubles/img/2637b6e8f3d14321.png 
+"Figure 1. Service Locator")
+
+
+**Using a Service Locator**
+
+![alt text](https://codelabs.developers.google.com/codelabs/advanced-android-kotlin-training-testing-test-doubles/img/8ea9e5c7be9e2974.png 
 "Figure 1. Service Locator")
