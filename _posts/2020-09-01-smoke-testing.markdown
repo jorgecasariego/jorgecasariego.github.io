@@ -77,7 +77,7 @@ Using an automated tool, test engineer records all manual steps that are perform
 
 Below flow chart shows how Smoke Testing is executed. Once the build is deployed in QA and, smoke tests are passed we proceed for functional testing. If the smoke test fails, we exit testing until the issue in the build is fixed.
 
-![alt text](https://github.com/jorgecasariego/jorgecasariego.github.io/blob/master/assets/images/posts/smoke_test-cycle.png
+![alt text](https://github.com/jorgecasariego/jorgecasariego.github.io/blob/master/assets/images/posts/smoke_test-cycle.png?raw=true 
 "Figure 2. Smoke Testing")
 
 ## Advantages of Smoke testing
