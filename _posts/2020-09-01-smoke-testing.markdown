@@ -19,7 +19,7 @@ In simple terms, we are verifying whether the important features are working and
 
 It is a mini and rapid regression test of major functionality. It is a simple test that shows the product is ready for testing. This helps determine if the build is flawed as to make any further testing a waste of time and resources.
 
-![alt text](https://codelabs.developers.google.com/codelabs/advanced-android-kotlin-training-testing-test-doubles/img/2637b6e8f3d14321.png 
+![alt text](https://raw.githubusercontent.com/jorgecasariego/jorgecasariego.github.io/master/assets/images/posts/smoke_testing.png 
 "Figure 1. Smoke Testing")
 
 The smoke tests qualify the build for further formal testing. The main aim of smoke testing is to detect early major issues. Smoke tests are designed to demonstrate system stability and conformance to requirements.
@@ -77,7 +77,7 @@ Using an automated tool, test engineer records all manual steps that are perform
 
 Below flow chart shows how Smoke Testing is executed. Once the build is deployed in QA and, smoke tests are passed we proceed for functional testing. If the smoke test fails, we exit testing until the issue in the build is fixed.
 
-![alt text](https://codelabs.developers.google.com/codelabs/advanced-android-kotlin-training-testing-test-doubles/img/2637b6e8f3d14321.png 
+![alt text](https://github.com/jorgecasariego/jorgecasariego.github.io/blob/master/assets/images/posts/smoke_test-cycle.png
 "Figure 2. Smoke Testing")
 
 ## Advantages of Smoke testing
