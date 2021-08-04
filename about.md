@@ -4,8 +4,9 @@ layout: page
 ---
 ![Profile Image]({{ site.url }}/{{ site.picture }})
 
-<p>I’m a Software Engineer profoundly passionate about Mobile Apps and Web Development.
-I have a diverse skill set but most closely align with Android and iOS programming.</p>
+<p>I’m an experienced Software Engineer with a demonstrated history of working in the Software development industry. 
+I have a diverse skill set but most closely align with Android and iOS programming.
+Skilled in Java, Swift, Kotlin, Android, iOS, Mobile Applications, and PL/SQL</p>
 
 <h2>Skills</h2>
 
@@ -25,19 +26,22 @@ I have a diverse skill set but most closely align with Android and iOS programmi
 <h2>Work</h2>
 
 <ul>
-	<li>BairesDev</li>
-	<li>Enterprise Solutions</li>
-	<li>Crossbow & Hills</li>
-	<li>Telecom Personal</li>
+	<li>Android Developer at <a href="https://x-team.com">X-Team</a></li>
+	<li>Android Developer at <a href="https://www.bairesdev.com">BairesDev</a></li>
+	<li>Software Engineer at <a href="https://www.linkedin.com/company/enterprise-solutions-py/">Enterprise Solutions</a></li>
+	<li>Android Developer at <b>Crossbow & Hills</b></li>
+	<li>System Engineer at <a href="https://www.personal.com.py">Telecom Personal</a></li>
+	<li>Software Engineer at <b>BBSoft</b></li>
+	<li>Web Application Developer at <a href="https://www.apf.org.py">Paraguayan Football Association</a></li>
 
 </ul>
 
 <h2>Education</h2>
 
 <ul>
-	<li>Polytechnic University of Catalonia</li>
-	<li>Universidad Católica 'Nuestra Señora de la Asunción'</li>
-	<li>ECM: European College Management</li>
+	<li><a href="https://www.linkedin.com/school/universitat-politecnica-de-catalunya/">Universitat Politècnica de Catalunya</a></li>
+	<li><a href="https://www.linkedin.com/school/unicatolicapy/">Universidad Católica 'Nuestra Señora de la Asunción'</a></li>
+	<li><a href="https://www.linkedin.com/school/ecm-european-college-management/about/">ECM: European College Management</a></li>
 </ul>
 
 <h2>Certifications</h2>
