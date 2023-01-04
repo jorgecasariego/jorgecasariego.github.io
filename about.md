@@ -26,6 +26,7 @@ Skilled in Java, Swift, Kotlin, Android, iOS, Mobile Applications, and PL/SQL</p
 <h2>Work</h2>
 
 <ul>
+    <li>Android Engineer at <a href="https://www.linkedin.com/company/paypal/">PayPal</a></li>
 	<li>Android Developer at <a href="https://x-team.com">X-Team</a></li>
 	<li>Android Developer at <a href="https://www.bairesdev.com">BairesDev</a></li>
 	<li>Software Engineer at <a href="https://www.linkedin.com/company/enterprise-solutions-py/">Enterprise Solutions</a></li>
