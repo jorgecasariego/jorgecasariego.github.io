@@ -16,8 +16,16 @@
             </span>
         {% endif %}
 
+        {% if site.eyebrow and page.title == "Home" %}
+            <p class="eyebrow">{{ site.eyebrow }}</p>
+        {% endif %}
+
         <h1 class="title">{{ site.name }}</h1>
         <h2 class="description">{{ site.bio }}</h2>
+
+        {% if site.tagline and page.title == "Home" %}
+            <p class="tagline">{{ site.tagline }}</p>
+        {% endif %}
 
         {% include social-links.html %}
     </header>

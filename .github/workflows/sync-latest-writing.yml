@@ -1,0 +1,44 @@
+name: Sync Latest Writing
+
+# Keeps _data/latest_writing.yml in sync with the Mobile Coding Academy
+# Substack feed. This is intentionally decoupled from the site's
+# deployment, which continues to be built natively by GitHub Pages on
+# every push to the default branch.
+#
+# Triggers are schedule + workflow_dispatch ONLY (no push/pull_request),
+# so this workflow's own commits can never cause it to re-run.
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fetch latest Substack posts
+        run: ruby script/sync_latest_writing.rb
+
+      - name: Check for changes
+        id: diff
+        run: |
+          if git diff --quiet -- _data/latest_writing.yml; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push if changed
+        if: steps.diff.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _data/latest_writing.yml
+          git commit -m "Sync latest writing from Substack"
+          git push

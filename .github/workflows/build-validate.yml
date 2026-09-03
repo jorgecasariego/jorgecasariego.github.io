@@ -1,0 +1,30 @@
+name: Build Validation (temporary)
+
+# Disposable, manual-only check that the site still builds with Jekyll,
+# using the same Ruby/Jekyll version GitHub Pages currently builds with
+# (see https://pages.github.com/versions/). Does not deploy anything and
+# does not change how GitHub Pages itself builds/serves this repo.
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3.4"
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: bundle install
+
+      - name: Build with Jekyll
+        run: bundle exec jekyll build --trace

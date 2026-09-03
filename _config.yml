@@ -1,6 +1,8 @@
 # main text of home
 name: Jorge Casariego
-bio: I’m a Software Engineer profoundly passionate about Mobile Apps and Web Development.
+eyebrow: Senior Android Engineer
+bio: 10+ years building Android and mobile products, including large-scale fintech and payments experiences.
+tagline: I write about Android engineering, architecture, and practical AI-assisted engineering through Mobile Coding Academy.
 
 # twitter summary info
 description: A blog about technology and stuff related
@@ -19,19 +21,12 @@ resume-url: https://google.com/?q=my+resume
 url: https://jorgecasariego.github.io
 # your url: http://USERNAME.github.io
 
-permalink: /:title/
-
 # To enable google analytics, supply your token below
 # analytics-google: 'UA-MYANALYTICS'
 
 # To enable piwik tracking, supply your url & site ID below
 # analytics-piwik-url: 'piwik.my-host.com'
 # analytics-piwik-id: 1
-
-# if you don't want comments in your posts, leave categories empty
-#disqus:
-#  shortname: mydisqus # enter this from your disqus account
-#  categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
 #facebook: myfacebook
@@ -47,50 +42,27 @@ github: jorgecasariego
 # lastfm: mylastfm
 stackoverflow: 2091181/jorge-casariego
 #quora: https://www.quora.com/profile/Jorge-Casariego
+
+# Homepage-only destinations (not wired into _includes/social-links.html)
+substack-url: https://mobilecodingacademy.substack.com/
+youtube-url: https://www.youtube.com/@MobileCodingAcademy
 # reddit: username
 # medium: medium
 # vimeo: myvimeo
 # lanyrd: mylanyrd
 email: jorgekasa@gmail.com
 
-authors:
-    johndoe:
-        name: Jorge Casariego
-        bio: I’m a Software Engineer profoundly passionate about Mobile Apps and Web Development
-        external-image: false
-        picture: assets/images/profile.jpg
-        twitter: jorgecasariego
-
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
 # normal = 560px / large = 810px
 width: normal
-
-# if you don't need pagination, comment the *paginate* configs below
-paginate: 5
-paginate_path: "blog/:num/"
 
 # if you don't need projects, comment the *projects* configs below
 # projects: true
 
 # if you don't need "about" or "blog", comment them out below
 about: true
-blog: true
-
-# do you want to show the "read time" of the posts?
-read-time: true
-
-# do you want to show the "tags" inside the posts?
-show-tags: true
-
-# related posts inside a post?
-related: true
-
-# Display links for next and previous posts for the specified categories
-post-advance-links: [blog]
-
-# show author block at the end of a post ?
-show-author: true
+blog: false
 
 # do you want some animations?
 animation: true

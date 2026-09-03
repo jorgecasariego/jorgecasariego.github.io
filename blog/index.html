@@ -1,31 +1,9 @@
 ---
-# blog page must be named index.html and in its own folder to support pagination
-# https://jekyllrb.com/docs/pagination/
 layout: page
 title: Blog
-pagination:
-    enabled: true
 ---
-<section class="list">
-	{% if site.posts.size == 0 %}
-		<p class="text-center">Nothing published yet!</p>
-	{% elsif site.paginate %}
-		{% for post in paginator.posts %}
-			{% if post.category == 'blog' %}
-				{% if post.hidden != true %}
-					{% include blog-post.html %}
-				{% endif %}
-			{% endif %}
-		{% endfor %}
 
-		{% include pagination.html%}
-	{% else %}
-		{% for post in site.posts %}
-			{% if post.category == 'blog' %}
-				{% if post.hidden != true %}
-					{% include blog-post.html %}
-				{% endif %}
-			{% endif %}
-		{% endfor %}
-	{% endif %}
-</section>
+<meta http-equiv="refresh" content="0; url=https://mobilecodingacademy.substack.com/">
+<link rel="canonical" href="https://mobilecodingacademy.substack.com/">
+
+<p>This blog has moved. All technical writing is now published on <a href="https://mobilecodingacademy.substack.com/">Mobile Coding Academy</a> — redirecting you there now.</p>

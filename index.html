@@ -2,3 +2,70 @@
 layout: page
 title: Home
 ---
+
+<section class="home-section experience">
+    <h2 class="section-title">Selected Experience</h2>
+
+    <p>Over the last decade, I've worked on Android products across fintech, media, and consumer applications. Most recently, I worked on large-scale payments experiences at PayPal.</p>
+
+    <h3 class="section-subtitle">Open Source</h3>
+    <p>I've also contributed to open-source Android projects, including <a href="https://github.com/wordpress-mobile/WordPress-Android/commits?author=jorgecasariego" target="_blank">WordPress for Android</a> and <a href="https://github.com/wikimedia/apps-android-wikipedia/commits?author=jorgecasariego" target="_blank">Wikipedia for Android</a>.</p>
+</section>
+
+<section class="home-section focus-areas">
+    <h2 class="section-title">Focus Areas</h2>
+
+    <div class="focus-item">
+        <h3>Android Architecture</h3>
+        <p>Designing maintainable state, data, navigation, and UI flows for complex mobile products.</p>
+    </div>
+
+    <div class="focus-item">
+        <h3>Concurrency &amp; Reactive Systems</h3>
+        <p>Coroutines, Flow, state ownership, synchronization, and predictable asynchronous UI behavior.</p>
+    </div>
+
+    <div class="focus-item">
+        <h3>Fintech &amp; Mobile Security</h3>
+        <p>Payments, sensitive data, authentication, cryptographic keys, reliability, and secure mobile engineering.</p>
+    </div>
+
+    <div class="focus-item">
+        <h3>AI-Assisted Engineering</h3>
+        <p>Exploring where AI improves real software engineering workflows — and where engineering judgment, validation, and verification still matter.</p>
+    </div>
+</section>
+
+<section class="home-section writing">
+    <h2 class="section-title">Writing &amp; Teaching</h2>
+
+    <p>I write and create videos about the engineering ideas behind production mobile apps — architecture, Compose, concurrency, security, performance, and AI-assisted engineering — through Mobile Coding Academy.</p>
+
+    <h3 class="section-subtitle">Latest Writing</h3>
+    {% if site.data.latest_writing and site.data.latest_writing.size > 0 %}
+        <ul class="latest-writing-list">
+            {% for post in site.data.latest_writing limit:3 %}
+                <li><a href="{{ post.url }}" target="_blank">{{ post.title }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p><a href="{{ site.substack-url }}" target="_blank">Read the latest on Substack</a>.</p>
+    {% endif %}
+
+    <p class="paths-out">
+        <a href="{{ site.substack-url }}" target="_blank">Substack</a> — long-form technical writing.<br>
+        <a href="{{ site.youtube-url }}" target="_blank">YouTube</a> — technical videos and visual explanations.
+    </p>
+</section>
+
+<section class="home-section elsewhere">
+    <h2 class="section-title">Elsewhere</h2>
+
+    <ul class="elsewhere-list">
+        <li><a href="https://linkedin.com/in/{{ site.linkedin }}" target="_blank">LinkedIn</a> — Professional experience and career updates.</li>
+        <li><a href="https://github.com/{{ site.github }}" target="_blank">GitHub</a> — Code, experiments, engineering projects, and open-source work.</li>
+        <li><a href="https://stackoverflow.com/users/{{ site.stackoverflow }}" target="_blank">Stack Overflow</a> — Years of technical Q&amp;A and community contributions.</li>
+        <li><a href="{{ site.substack-url }}" target="_blank">Substack</a> — Long-form writing on mobile engineering.</li>
+        <li><a href="{{ site.youtube-url }}" target="_blank">YouTube</a> — Mobile Coding Academy videos and visual technical explanations.</li>
+    </ul>
+</section>
