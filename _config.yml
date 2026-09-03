@@ -30,7 +30,6 @@ url: https://jorgecasariego.github.io
 
 # if you don't have any of social below, comment the line
 #facebook: myfacebook
-twitter: jorgecasariego
 # google: mygoogle
 # instagram: myinstagram
 # pinterest: mypinterest
@@ -43,7 +42,8 @@ github: jorgecasariego
 stackoverflow: 2091181/jorge-casariego
 #quora: https://www.quora.com/profile/Jorge-Casariego
 
-# Homepage-only destinations (not wired into _includes/social-links.html)
+# Also rendered in the hero social row (_includes/social-links.html) and
+# referenced inside the homepage's Writing & Teaching section
 substack-url: https://mobilecodingacademy.substack.com/
 youtube-url: https://www.youtube.com/@MobileCodingAcademy
 # reddit: username
@@ -60,8 +60,7 @@ width: normal
 # if you don't need projects, comment the *projects* configs below
 # projects: true
 
-# if you don't need "about" or "blog", comment them out below
-about: true
+# if you don't need "blog", comment it out below
 blog: false
 
 # do you want some animations?

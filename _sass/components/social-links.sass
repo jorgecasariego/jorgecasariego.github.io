@@ -9,11 +9,11 @@
         height: 35px
         width: 35px
 
-        &:hover
+        &:hover, &:focus-visible
             > .icon
                 fill: $delta
 
-        &:hover:before
+        &:hover:before, &:focus-visible:before
             opacity: 1
             display: inline-block
             transform: translate3d(0,0,0)
@@ -53,7 +53,7 @@
             transform: translate3d(0,-8px,0)
             z-index: 100
 
-        &:hover:after
+        &:hover:after, &:focus-visible:after
             opacity: 1
             transform: translate3d(0,0,0)
 
