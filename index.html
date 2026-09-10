@@ -45,7 +45,14 @@ title: Home
     {% if site.data.latest_writing and site.data.latest_writing.size > 0 %}
         <ul class="latest-writing-list">
             {% for post in site.data.latest_writing limit:3 %}
-                <li><a href="{{ post.url }}" target="_blank">{{ post.title }}</a></li>
+                <li class="latest-writing-item">
+                    <a href="{{ post.url }}" target="_blank">
+                        {% if post.image %}
+                            <img class="latest-writing-thumb" src="{{ post.image }}" alt="" loading="lazy">
+                        {% endif %}
+                        <span class="latest-writing-title">{{ post.title }}</span>
+                    </a>
+                </li>
             {% endfor %}
         </ul>
     {% else %}

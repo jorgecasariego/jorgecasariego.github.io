@@ -74,8 +74,8 @@
         margin-right: 10px
 
 // Homepage content sections (Selected Experience, Focus Areas,
-// Writing & Teaching, Elsewhere) — distinct from the .list/.item
-// pattern above, which is shaped for chronological post/project listings.
+// Writing & Teaching) — distinct from the .list/.item pattern above,
+// which is shaped for chronological post/project listings.
 .home
     > .home-section
         margin-bottom: 60px
@@ -95,3 +95,34 @@
 
         &:last-child
             margin-bottom: 0
+
+    .latest-writing-list
+        list-style: none
+        margin: 0 0 20px
+        padding: 0
+
+    .latest-writing-item
+        margin-bottom: 16px
+
+        &:last-child
+            margin-bottom: 0
+
+        > a
+            display: flex
+            align-items: center
+            gap: 14px
+            text-decoration: none
+
+            &:hover .latest-writing-title
+                color: $delta
+
+    .latest-writing-thumb
+        width: 64px
+        height: 64px
+        border-radius: 4px
+        object-fit: cover
+        flex: none
+
+    .latest-writing-title
+        font-weight: 500
+        transition: color ease-in-out .2s
