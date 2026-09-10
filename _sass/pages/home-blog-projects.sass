@@ -102,27 +102,32 @@
         padding: 0
 
     .latest-writing-item
-        margin-bottom: 16px
+        margin-bottom: 32px
 
         &:last-child
             margin-bottom: 0
 
         > a
-            display: flex
-            align-items: center
-            gap: 14px
+            display: block
             text-decoration: none
 
+            &:hover .latest-writing-thumb
+                opacity: .85
+
             &:hover .latest-writing-title
-                color: $delta
+                text-decoration: underline
 
     .latest-writing-thumb
-        width: 64px
-        height: 64px
-        border-radius: 4px
+        display: block
+        width: 100%
+        aspect-ratio: 520 / 272
         object-fit: cover
-        flex: none
+        border-radius: 6px
+        margin-bottom: 12px
+        transition: opacity ease-in-out .2s
 
     .latest-writing-title
-        font-weight: 500
-        transition: color ease-in-out .2s
+        display: block
+        font-size: 1.3rem
+        font-weight: 600
+        line-height: 1.35
