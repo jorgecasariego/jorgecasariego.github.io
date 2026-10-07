@@ -25,9 +25,16 @@ DATA_FILE = File.expand_path("../_data/latest_writing.yml", __dir__)
 
 def fetch(url)
   uri = URI(url)
+  request = Net::HTTP::Get.new(uri)
+  # Substack's edge returns 403 to requests with no User-Agent/Accept
+  # (e.g. Ruby's bare default), which is what GitHub Actions runners send.
+  # Identify this as a legitimate RSS fetch rather than spoofing a browser.
+  request["User-Agent"] = "jorgecasariego.github.io-latest-writing-sync/1.0 (+https://jorgecasariego.github.io/)"
+  request["Accept"] = "application/rss+xml, application/xml;q=0.9, */*;q=0.8"
+
   response = Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == "https",
                               open_timeout: 10, read_timeout: 10) do |http|
-    http.get(uri)
+    http.request(request)
   end
 
   raise "unexpected response code #{response.code}" unless response.code == "200"

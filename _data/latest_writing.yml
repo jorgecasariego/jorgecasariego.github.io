@@ -1,13 +1,13 @@
 ---
-- title: An LLM Doesn't Remember Your Conversation
-  url: https://jorgecasariego.substack.com/p/an-llm-doesnt-remember-your-conversation
-  date: '2026-09-10'
-  image: https://substack-post-media.s3.amazonaws.com/public/images/0754574c-f388-4816-a397-80595a2b3c16_1774x887.png
-- title: I Thought Prompt Engineering Was the Hard Part
-  url: https://jorgecasariego.substack.com/p/i-thought-prompt-engineering-was
-  date: '2026-09-10'
-  image: https://substack-post-media.s3.amazonaws.com/public/images/df50a49f-c5dd-4184-981f-3477f7433d6f_1672x941.png
-- title: 'The First 15 Minutes: How Senior Engineers Turn Ambiguity Into a Plan'
-  url: https://mobilecodingacademy.substack.com/p/the-first-15-minutes-how-senior-engineers
-  date: '2026-09-01'
-  image: https://substack-post-media.s3.amazonaws.com/public/images/27a07714-41e8-4516-aea8-fb391af43964_1254x1254.png
+- title: The LLM Asked to Call a Function. Should I Let It?
+  url: https://jorgecasariego.substack.com/p/the-llm-asked-to-call-a-function
+  date: '2026-10-07'
+  image: https://substack-post-media.s3.amazonaws.com/public/images/0e8fcdf3-234a-4392-9784-c2dfffed2d5c_1734x907.png
+- title: Valid JSON Doesn't Mean a Valid Answer
+  url: https://jorgecasariego.substack.com/p/valid-json-doesnt-mean-a-valid-answer
+  date: '2026-09-30'
+  image: https://substack-post-media.s3.amazonaws.com/public/images/c60c2e0d-acf9-433c-885a-8006bf2f80ab_1734x907.png
+- title: How Do You Test Something That Doesn't Always Give the Same Answer?
+  url: https://jorgecasariego.substack.com/p/how-do-you-test-something-that-doesnt
+  date: '2026-09-28'
+  image: https://substack-post-media.s3.amazonaws.com/public/images/afea8afd-392f-4951-b605-b3c3d945ea8f_1734x907.png
