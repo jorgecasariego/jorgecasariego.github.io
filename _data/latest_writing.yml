@@ -1,13 +1,13 @@
 ---
-- title: The LLM Asked to Call a Function. Should I Let It?
-  url: https://jorgecasariego.substack.com/p/the-llm-asked-to-call-a-function
-  date: '2026-10-07'
-  image: https://substack-post-media.s3.amazonaws.com/public/images/0e8fcdf3-234a-4392-9784-c2dfffed2d5c_1734x907.png
-- title: Valid JSON Doesn't Mean a Valid Answer
-  url: https://jorgecasariego.substack.com/p/valid-json-doesnt-mean-a-valid-answer
-  date: '2026-09-30'
-  image: https://substack-post-media.s3.amazonaws.com/public/images/c60c2e0d-acf9-433c-885a-8006bf2f80ab_1734x907.png
-- title: How Do You Test Something That Doesn't Always Give the Same Answer?
-  url: https://jorgecasariego.substack.com/p/how-do-you-test-something-that-doesnt
-  date: '2026-09-28'
-  image: https://substack-post-media.s3.amazonaws.com/public/images/afea8afd-392f-4951-b605-b3c3d945ea8f_1734x907.png
+- title: If AI Writes the Code, What Makes Us Software Engineers?
+  url: https://jorgecasariego.substack.com/p/if-ai-writes-the-code-what-makes
+  date: '2026-10-25'
+  image: https://substack-post-media.s3.amazonaws.com/public/images/c1f9f2f4-c940-45d1-b1eb-e12b9d6c8dbe_1729x910.png
+- title: The AI Knew the Rules. It Crossed the Line Anyway.
+  url: https://jorgecasariego.substack.com/p/the-ai-knew-the-rules-it-crossed
+  date: '2026-10-11'
+  image: https://substackcdn.com/image/fetch/$s_!6dtn!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3ad516f9-6cbf-432c-a136-2ba5d1d0d63e_1536x1024.png
+- title: Prompt Injection Isn't Just a Prompt Problem
+  url: https://jorgecasariego.substack.com/p/prompt-injection-isnt-just-a-prompt
+  date: '2026-10-08'
+  image: https://substack-post-media.s3.amazonaws.com/public/images/cf2a5d55-b2ff-4257-890c-a05bfd2a2a42_1733x907.png
