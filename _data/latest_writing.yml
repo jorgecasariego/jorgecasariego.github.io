@@ -1,4 +1,8 @@
 ---
+- title: 'Git Worktrees: A Git Feature I Wish I''d Discovered Earlier'
+  url: https://jorgecasariego.substack.com/p/git-worktrees-a-git-feature-i-wish
+  date: '2026-11-18'
+  image: https://substack-post-media.s3.amazonaws.com/public/images/9a81d3cb-2a08-4467-ac10-600623eb478c_1672x941.png
 - title: If AI Writes the Code, What Makes Us Software Engineers?
   url: https://jorgecasariego.substack.com/p/if-ai-writes-the-code-what-makes
   date: '2026-10-25'
@@ -7,7 +11,3 @@
   url: https://jorgecasariego.substack.com/p/the-ai-knew-the-rules-it-crossed
   date: '2026-10-11'
   image: https://substackcdn.com/image/fetch/$s_!6dtn!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3ad516f9-6cbf-432c-a136-2ba5d1d0d63e_1536x1024.png
-- title: Prompt Injection Isn't Just a Prompt Problem
-  url: https://jorgecasariego.substack.com/p/prompt-injection-isnt-just-a-prompt
-  date: '2026-10-08'
-  image: https://substack-post-media.s3.amazonaws.com/public/images/cf2a5d55-b2ff-4257-890c-a05bfd2a2a42_1733x907.png
